@@ -1,0 +1,40 @@
+plugins {
+    id 'scala'
+}
+
+group = 'org.opencypher'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    jcenter()
+    mavenLocal()
+}
+
+dependencies {
+    implementation group: 'org.opencypher', name: 'shade-tests', version: '1.0-SNAPSHOT'
+
+    implementation 'org.scala-lang:scala-library:2.12.8'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.scalatest:scalatest_2.12:3.0.5'
+
+    testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.12:1.1.1'
+}
+
+ext.scalacParameters = [
+        "-target:jvm-1.8".toString(),
+        '-explaintypes',
+        '-g:notailcalls',
+        '-Xfatal-warnings',
+        '-Xfuture',
+        '-Ypartial-unification',
+        '-Ywarn-adapted-args',
+        '-deprecation',
+        '-feature',
+        '-unchecked',
+]
+
+tasks.withType(ScalaCompile) {
+    options.encoding = 'UTF-8'
+    scalaCompileOptions.additionalParameters = scalacParameters
+}
