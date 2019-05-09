@@ -1,0 +1,3 @@
+= Shade tests
+
+Code to investigate shading and its many pitfalls.
