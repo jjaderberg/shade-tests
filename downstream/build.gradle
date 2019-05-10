@@ -11,7 +11,8 @@ repositories {
 }
 
 dependencies {
-    implementation group: 'org.opencypher', name: 'shade-tests', version: '1.0-SNAPSHOT'
+//    implementation group: 'org.opencypher', name: 'shade-tests', version: '1.0-SNAPSHOT'
+//    implementation group: 'org.opencypher', name: 'sbt-shade-tests-assembly', version: '0.1'
 
     implementation 'org.scala-lang:scala-library:2.12.8'
 

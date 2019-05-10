@@ -6,6 +6,7 @@ package downstream
 import org.scalatest.FunSuite
 import org.junit.runner.RunWith
 import org.scalatest.junit.JUnitRunner
+import shade.tests.Library
 
 @RunWith(classOf[JUnitRunner])
 class LibrarySuite extends FunSuite {

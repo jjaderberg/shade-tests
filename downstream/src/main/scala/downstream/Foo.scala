@@ -3,17 +3,17 @@
  */
 package downstream
 
-import shade.tests.MyDriver
+import shade.tests.{Library, MyDriver}
 
 import scala.util.{Failure, Success, Try}
 
 object Foo extends App {
   val someLibraryMethod: Boolean = {
-//    val foo = new Library
-    val foo = new MyDriver
+    val foo = new Library
+//    val foo = new MyDriver
     Try {
-      foo.close()
-//      foo.myMonoid
+//      foo.close()
+      foo.myMonoid
     } match {
       case Success(x) => println("Success")
       case Failure(x) => println("Failure")
